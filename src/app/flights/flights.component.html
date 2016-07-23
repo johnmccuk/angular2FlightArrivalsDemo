@@ -1,17 +1,30 @@
 <div class="row">
   <div class="col-md-6">
     <table class="table table-striped">
-      <tr><th></th><th>Flight</th><th>Distance (miles)</th><th>Arrival Status</th></tr>
-      <tr *ngFor="let flight of currentFlights">
-        <td><i class="fa fa-plane" aria-hidden="true"></i></td>
+      <tr>
+          <th>Flight</th>
+          <th>Distance (miles)</th>
+          <th>Arrival Status</th>
+          <th class="text-center"><button type="button" class="btn btn-primary btn-xs" (click)="add()"><i class="fa fa-plane" aria-hidden="true"></i></button>
+        </tr>
+      <tr *ngFor="let flight of currentFlights" [class.success]="flight.landed">
         <td>{{flight.name | uppercase}}</td>
          <td>{{flight.distance}}</td>
-        <td ng-class="">{{flight.arrivalTime | uppercase}}</td>       
+        <td ng-class="">{{flight.arrivalTime | uppercase}}</td>
+        <td></td>      
       </tr>
     </table>
   </div>
   <div class="col-md-6">
-    <button type="button" class="btn btn-primary" (click)="add()">Add Random Flight</button>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">About</div>
+      <div class="panel-body">
+        <p>Basic panel example</p>
+        <button type="button" class="btn btn-primary" (click)="add()">Add Random Flight</button>
+      </div>
+    </div>
+    
   </div>
 </div>
  
