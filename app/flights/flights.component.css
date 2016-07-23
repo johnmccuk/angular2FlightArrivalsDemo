@@ -1,0 +1,15 @@
+
+.table {
+    font-size: small;
+}
+.flight {
+    color: red;
+}
+
+.flight-service {
+    color: blue;
+}
+
+.flight-component {
+    color: green;
+}
