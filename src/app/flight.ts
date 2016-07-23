@@ -24,7 +24,7 @@ export class Flight {
     if (this.distance <= 0) {
       this.distance = 0;
       this.landed = true;
-      this.arrivalTime = 'Arrived';
+      this.arrivalTime = 'arrived';
     }
   }
 

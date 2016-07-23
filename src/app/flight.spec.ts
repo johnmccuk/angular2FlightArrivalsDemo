@@ -24,9 +24,11 @@ describe('Flight', () => {
     it('should land after distance reaches 0', (done) => {
         let flight = new Flight('test', 100);
         expect(flight.landed).toBe(false);
+        expect(flight.arrivalTime).not.toBe('arrived');
 
         setTimeout(() => {
             expect(flight.landed).toBe(true);
+            expect(flight.arrivalTime).toBe('arrived');
             done();
         }, 1000);
     });
