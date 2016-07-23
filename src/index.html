@@ -13,9 +13,26 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+    <div class="container">
 
-  
+      <div class="jumbotron" style="margin-top: 30px;">
+        <h1>Angular 2 Basic Demo</h1>
+        <p>This is a basic demo used to get to grips with Angular2.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="" role="button"><i class="fa fa-home" aria-hidden="true"></i> Blog</a>
+          <a class="btn btn-lg btn-primary" href="https://github.com/johnmccuk/angular2FlightArrivalsDemo" role="button" target="_new"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+          <a class="btn btn-lg btn-primary" href="https://uk.linkedin.com/in/john-mccracken-025846a5" role="button" target="_new"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+        </p>
+      </div>
+      
+      <app-root>
+        <div class='text-center'>
+          <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </app-root>
+
+    </div>
 
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
@@ -25,6 +42,7 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
+    <script src="https://use.fontawesome.com/0e94e57d9b.js"></script>
 
   
 
