@@ -1,0 +1,19 @@
+ <section *ngIf="currentFlights.length > 0">
+    <ul>
+      <li *ngFor="let flight of currentFlights">
+
+          <label>{{flight.name | uppercase}}</label>
+ <label>{{flight.distance}}</label>
+  <label>{{flight.landed}}</label>
+   <label>{{flight.arrivalTime}}</label>
+
+      </li>
+    </ul>
+  </section>
+  <div (currentFlightList)="test($event)">
+  
+  </div>
+<input type="text" class="counter__input" value="10"  (testOne)="test()">
+  
+
+  <button (click)="add()">ADD</button>
