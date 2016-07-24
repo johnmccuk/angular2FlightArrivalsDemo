@@ -3,6 +3,7 @@ export class Flight {
     distance: number;
     landed: boolean;
     arrivalTime: string;
+    timerObj;
     private cruiseSpeed = 520;
 
   constructor(name = 'unknown', distance = 1000, landed = false) {
@@ -11,13 +12,10 @@ export class Flight {
     this.distance = distance;
     this.landed = landed;
 
-    setInterval(() => this.updateDistance(), 1000);
+    this.timerObj = setInterval(() => this.updateDistance(), 1000);
   }
 
   updateDistance(): void {
-    if (this.landed === true) {
-      return;
-    }
     this.distance = this.distance - this.cruiseSpeed;
     this.updateArrivalTime(this.distance);
 
@@ -25,6 +23,7 @@ export class Flight {
       this.distance = 0;
       this.landed = true;
       this.arrivalTime = 'arrived';
+      clearInterval(this.timerObj);
     }
   }
 
