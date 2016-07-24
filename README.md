@@ -1,5 +1,6 @@
 # ArrivalBoard
 This is an Angular2 learning demo by [John McCracken](https://john-mccracken.com/).
+There is a corresponding [blog entry](https://blog.john-mccracken.com/blog/learning-angular2-part-2-basic-demo).
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.9.
 
