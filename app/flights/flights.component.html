@@ -1,39 +1,37 @@
 <div class="row">
-  <div class="col-md-6">
-    <table class="table table-striped">
-      <tr>
-          <th>Flight</th>
-          <th>Distance (miles)</th>
-          <th>Arrival Status</th>
-          <th class="text-center"><button type="button" class="btn btn-primary btn-xs" (click)="add()"><i class="fa fa-plane" aria-hidden="true"></i></button>
-        </tr>
-      <tr *ngFor="let flight of currentFlights" [class.success]="flight.landed">
-        <td>{{flight.name | uppercase}}</td>
-         <td>{{flight.distance}}</td>
-        <td ng-class="">{{flight.arrivalTime | uppercase}}</td>
-        <td></td>      
-      </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>Add a randomised Flight by clicking the button below or the <strong><i class="fa fa-plane" aria-hidden="true"></i></strong> icon on the Arrivals board.</p>
-        <p class="text-center"><button type="button" class="btn btn-primary" (click)="add()">Add Random Flight</button></p>
-
-        <p>
-          So whats happening? 
-        </p>
-        <p>
-          When you click the button, you access the <strong class="flight-component">FlightsComponent</strong> <strong><i>add</i></strong> method. 
-          This generates a random flight name and distance. It then passes these values to the <strong class="flight-service">FlightService</strong> <strong><i>addFlight</i></strong> method. 
-          It then adds an instance of the <strong class="flight">Flight</strong> class to the <strong><i>currentFlights</i></strong> array stored within the <strong class="flight-service">FlightService</strong>.
-        </p>
-        <p>The constructor of each <strong class="flight">Flight</strong> class starts a timer, which subtracts the average speed of a 747 (520 mph) from the distance. The <strong class="flight-component">FlightsComponent</strong> basically just relays this information to the html view.</p>
-      
-      </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <tr>
+                <th>Flight</th>
+                <th>Distance (miles)</th>
+                <th>Arrival Status</th>
+                <th class="text-center"><button type="button" class="btn btn-primary btn-xs" (click)="add()"><i class="fa fa-plane" aria-hidden="true"></i></button>
+            </tr>
+            <tr *ngFor="let flight of currentFlights" [class.success]="flight.landed">
+                <td>{{flight.name | uppercase}}</td>
+                <td>{{flight.distance}}</td>
+                <td ng-class="">{{flight.arrivalTime | uppercase}}</td>
+                <td></td>
+            </tr>
+        </table>
     </div>
-</div>
- 
- 
+    <div class="col-md-6">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>Add a randomised Flight by clicking the button below or the <strong><i class="fa fa-plane" aria-hidden="true"></i></strong>                    icon on the Arrivals board.</p>
+                <p class="text-center"><button type="button" class="btn btn-primary" (click)="add()">Add Random Flight</button></p>
+
+                <p>
+                    So whats happening?
+                </p>
+                <p>
+                    When you click the button, you access the <strong class="flight-component">FlightsComponent</strong>                    <strong><i>add</i></strong> method. This generates a random flight name and distance. It then passes
+                    these values to the <strong class="flight-service">FlightService</strong> <strong><i>addFlight</i></strong>                    method. It then adds an instance of the <strong class="flight">Flight</strong> class to the <strong><i>currentFlights</i></strong>                    array stored within the <strong class="flight-service">FlightService</strong>.
+                </p>
+                <p>The constructor of each <strong class="flight">Flight</strong> class starts a timer, which subtracts the
+                    average speed of a 747 (520 mph) from the distance. The <strong class="flight-component">FlightsComponent</strong>                    basically just relays this information to the html view.</p>
+
+            </div>
+        </div>
+    </div>
