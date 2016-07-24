@@ -7,15 +7,15 @@ without this decorator, this isnt included in dependency injecton
 @Injectable()
 export class FlightsService {
 
-  private currentFlights: Flight[] = [];
+    private currentFlights: Flight[] = [];
 
-  constructor() {}
+    constructor() { }
 
-  addFlight(name: string, distance: number): void {
-      this.currentFlights.push(new Flight(name, distance));
-  }
+    addFlight(name: string, distance: number): void {
+        this.currentFlights.push(new Flight(name, distance));
+    }
 
-  getFlights(): Array<Flight> {
-      return this.currentFlights;
-  }
+    getFlights(): Array<Flight> {
+        return this.currentFlights;
+    }
 }

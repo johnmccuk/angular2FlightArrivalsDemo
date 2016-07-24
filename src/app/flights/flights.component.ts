@@ -3,11 +3,11 @@ import {FlightsService} from '../flights.service';
 import {Flight} from '../flight';
 
 @Component({
-  moduleId: module.id,
-  selector: 'app-flights',
-  templateUrl: 'flights.component.html',
-  styleUrls: ['flights.component.css'],
-  providers: [FlightsService]
+    moduleId: module.id,
+    selector: 'app-flights',
+    templateUrl: 'flights.component.html',
+    styleUrls: ['flights.component.css'],
+    providers: [FlightsService]
 })
 export class FlightsComponent implements OnInit {
     public currentFlights: Array<Flight> = [];
@@ -19,16 +19,16 @@ export class FlightsComponent implements OnInit {
     /*
         not sure what this is for
     */
-    ngOnInit() {}
+    ngOnInit() { }
 
     add(): void {
-      this.flightsService.addFlight(this.generateName(), this.generateDistance());
-      this.sort();
+        this.flightsService.addFlight(this.generateName(), this.generateDistance());
+        this.sort();
     }
 
     sort(): void {
-        this.currentFlights.sort(function(a, b) {
-          return a.distance - b.distance;
+        this.currentFlights.sort(function (a, b) {
+            return a.distance - b.distance;
         });
     }
 
