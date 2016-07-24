@@ -7,7 +7,6 @@ export class Flight {
     private cruiseSpeed = 520;
 
   constructor(name = 'unknown', distance = 1000, landed = false) {
-
     this.name = name;
     this.distance = distance;
     this.landed = landed;
